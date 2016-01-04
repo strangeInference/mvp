@@ -18,27 +18,36 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Confidence Calibration Helper.
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  The Confidence Calibration Helper is for software engineers who would like to be better calibrated when making predictions about how thier code will behave.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Often when people say they're 99% confident they only turn out to be right 70% of the time, for some others when they feel only 40% confident they're actualy right 80% of the time. Overconfidence and underconfidence lead to poor decision making. Foutuneatly Confidence calibration can be improved with training. 
 
 ## Problem ##
   > Describe the problem your product solves.
+  The problem is over and under confidence.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  The confidence calibration tool gives feedback on how often you turn out to be right relative to your confidence.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "It's better to think you're right and actualy be right then to just think you're right"
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  just go to confidenceCal.com
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I used to be so overconfident without even realizing it"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  We should all strive for perfect calibration!
