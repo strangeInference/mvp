@@ -1,5 +1,5 @@
 .table {
-  width: 550px;
+  width: 600px;
   color: green;
 }
 
@@ -11,14 +11,17 @@
 }
 
 .graph {
-  width: 550;
+  width: 600;
   height: 300;
 }
 
 .bar {
-  width: 40px
-  margin: 5px;
-  height: 100px
+  width: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 101px;
   display: inline-block;
+  position: relative;
   background-color: green;
+  bottom: 0px;
 }
