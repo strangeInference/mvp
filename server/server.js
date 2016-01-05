@@ -3,9 +3,10 @@ var mongoose = require('mongoose')
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var app = express();
-
+//var currentUser;
 
 var stats = [[],[],[],[],[],[],[],[],[],[],[]];
+var users = {};
 
 module.exports.app = app;
 app.set('port', 3000);
@@ -34,12 +35,21 @@ app.use(session({
 
 app.get('/data', function(req, res){
   console.log('trying to get data')
-  res.send(JSON.stringify(stats));
+  //stats = users[currentUser];
+  res.send(JSON.stringify(users));
 });
 
 app.post('/data', function(req, res){
+  var currentUser = req.body.username;
+  if (!(currentUser in users)){
+    users[currentUser] = [];
+    for (var i = 0; i < 11; i++){
+       users[user].push([]);
+    }
+  }
+  stats = users[currentUser];
   stats[req.body.perc].push(req.body.truth);
-  console.log("expect 0: " + req.body.perc);
+  console.log("expect 0: " + req.body.username);
 })
 
 // app.get('/', function(req, res){
@@ -53,37 +63,45 @@ app.listen(5000);
 //UTILITY
 //***************************
 
-var createSession = function(req, res, newUser) {
-  return req.session.regenerate(function () {
-    req.session.user = newUser;
-    res.redirect('/');
-  });
-};
+// var createSession = function(req, res, newUser) {
+//   return req.session.regenerate(function () {
+//     req.session.user = newUser;
+//     res.redirect('/');
+//   });
+// };
 
-var isLoggedIn = function (req, res) {
-  return req.session ? !!req.session.user : false;
-};
+// var isLoggedIn = function (req, res) {
+//   return req.session ? !!req.session.user : false;
+// };
 
-var checkUser = function (req, res, next) {
-  if (!exports.isLoggedIn(req)) {
-    res.redirect('/login');
-  } else {
-    next();
-  }
-};
+// var checkUser = function (req, res, next) {
+//   if (!exports.isLoggedIn(req)) {
+//     res.redirect('/login');
+//   } else {
+//     next();
+//   }
+// };
 
 
 //***************************
 // AUTHENTICATION
 //***************************
 
-app.get('/signup', function(req, res){
+// app.get('/signup', function(req, res){
 
-});
-app.get('/login', function(req, res){
-  console.log(req.body);
+// });
+// app.get('/login', function(req, res){
+//   var user = req.body.username;
+//   currentUser = user;
+//   console.log(req.body);
+//   if(!(user in users)){
+//     users[user] = [];
+//     for (var i = 0; i < 11; i++){
+//       users[user].push([]);
+//     }
+//   }
 
-});
-app.get('/logout', function(req, res){
+// });
+// app.get('/logout', function(req, res){
 
-})
+// })

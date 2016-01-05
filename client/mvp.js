@@ -1,4 +1,5 @@
 var stats = [[],[],[],[],[],[],[],[],[],[],[]];
+var currentUser;
 
 // $(document).ready(function(){
 
@@ -34,6 +35,7 @@ $(document).ready(function(){
   $('.reality').submit(function(event){
     event.preventDefault();
     var $form = $(this);
+    var username = $form.find('input[name=user]').val();
     var perc = $form.find('select').val();
     var truth = $form.find('input[name=yn]:checked').val();
     truth = Number(truth);
@@ -53,6 +55,7 @@ $(document).ready(function(){
     //   return Math.floor((corrects / d.length) * 300) + 'px';
     // });
     var data = JSON.stringify({
+      username: username,
       perc: perc,
       truth: truth
     });
@@ -63,6 +66,24 @@ $(document).ready(function(){
       'processData': false,
       'contentType': 'application/json' 
     });
+
+    d3.json('/data', function(err, confData){
+     if (err){
+       console.log('failed to get data:' + err);
+     }else{
+       console.log(confData);
+      d3.selectAll('.bar').data(confData[username])
+      .style('height', function(d){
+      
+        return heightFromData(d) + 'px';
+      })
+      // .style('bottom', function(d){
+      //   return -300 + heightFromData(d) + 'px';
+      // });
+     }
+    // console.log(confData);
+    })
+
   });
 });
 
