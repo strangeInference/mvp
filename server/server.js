@@ -1,8 +1,10 @@
 var express = require('express');
 var mongoose = require('mongoose')
+var bodyParser = require('body-parser');
 var app = express();
 
-var stats = [[true, false],[true, false, false],[true],[],[],[],[],[],[],[],[true,true,true,false]];
+
+var stats = [[],[],[],[],[],[],[],[],[],[],[]];
 
 module.exports.app = app;
 app.set('port', 3000);
@@ -20,6 +22,7 @@ db.once('open', function(){
 console.log(__dirname);
 // Serve client static files
 app.use(express.static(__dirname + '/../client'));
+app.use(bodyParser.json());
 
 app.get('/data', function(req, res){
   console.log('trying to get data')
@@ -27,7 +30,8 @@ app.get('/data', function(req, res){
 });
 
 app.post('/data', function(req, res){
-  console.log(req.body);
+  stats[req.body.perc].push(req.body.truth);
+  console.log("expect 0: " + req.body.perc);
 })
 
 // app.get('/', function(req, res){

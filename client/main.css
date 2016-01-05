@@ -4,7 +4,7 @@ form {
 
 .table {
   width: 600px;
-  color: green;
+  
 }
 
 .conf {
@@ -38,10 +38,10 @@ form {
         -webkit-transform:
             translateY(20px)
             translateX(5px)
-            rotate(-27deg);
-        position: relative;
-        top: -456px;
-        left: -102px;
+            rotate(-29deg);
+        position: absolute;
+        top: 98px;
+        left: -90px;
 
     }
 
