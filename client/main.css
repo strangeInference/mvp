@@ -19,9 +19,23 @@
   width: 40px;
   margin-right: 5px;
   margin-left: 5px;
-  height: 101px;
+  height: 100px;
   display: inline-block;
   position: relative;
   background-color: green;
-  bottom: 0px;
+  bottom: -200px;
 }
+
+.line {
+        width: 650px;
+        height: 300px;
+        border-bottom: 1px solid black;
+        -webkit-transform:
+            translateY(20px)
+            translateX(5px)
+            rotate(-27deg);
+        position: relative;
+        top: -254px;
+        left: -100px;
+
+    }
