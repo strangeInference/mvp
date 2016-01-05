@@ -20,11 +20,16 @@ $(document).ready(function(){
     event.preventDefault();
     var $form = $(this);
     var perc = $form.find('select').val();
-    var truth = $form.find('input[name="ys"]').val();
+    var truth = $form.find('input').val();
     var url = $form.attr('action');
     console.log(perc + " " + truth + " " + url);
-  })
-})
+
+    $.post(url, {
+      perc: perc,
+      truth: truth
+    });
+  });
+});
 
 var heightFromData = function(array){
   console.log("Dee Dee Dee func")

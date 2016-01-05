@@ -27,7 +27,7 @@ app.get('/data', function(req, res){
 });
 
 app.post('/data', function(req, res){
-  console.log(req.body.yn);
+  console.log(req.body);
 })
 
 // app.get('/', function(req, res){
