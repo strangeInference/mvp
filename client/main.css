@@ -1,3 +1,7 @@
+form {
+  margin-bottom: 90px;
+}
+
 .table {
   width: 600px;
   color: green;
@@ -20,11 +24,11 @@
   width: 40px;
   margin-right: 5px;
   margin-left: 5px;
-  height: 100px;
+  /*height: 100px;*/
   display: inline-block;
   position: relative;
   background-color: green;
-  bottom: -200px;
+  /*bottom: -200px;*/
 }
 
 .line {
@@ -36,7 +40,9 @@
             translateX(5px)
             rotate(-27deg);
         position: relative;
-        top: -254px;
-        left: -100px;
+        top: -456px;
+        left: -102px;
 
     }
+
+

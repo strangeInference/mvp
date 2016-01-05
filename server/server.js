@@ -2,7 +2,7 @@ var express = require('express');
 var mongoose = require('mongoose')
 var app = express();
 
-var stats = [[true, false],[true, false],[],[],[],[],[],[],[],[],[]];
+var stats = [[true, false],[true, false, false],[true],[],[],[],[],[],[],[],[true,true,true,false]];
 
 module.exports.app = app;
 app.set('port', 3000);
@@ -25,6 +25,10 @@ app.get('/data', function(req, res){
   console.log('trying to get data')
   res.send(JSON.stringify(stats));
 });
+
+app.post('/data', function(req, res){
+  console.log(req.body.yn);
+})
 
 // app.get('/', function(req, res){
 //   //res.send('you can hear my server');

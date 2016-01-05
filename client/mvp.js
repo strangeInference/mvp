@@ -15,13 +15,37 @@ var stats = [[true],[],[],[],[],[],[],[],[],[],[]];
 //     console.log(stats[$('select').val()]);
 //   })
 
+var heightFromData = function(array){
+  console.log("Dee Dee Dee func")
+  var corrects = 0;
+  for (var i = 0; i < array.length; i++){
+    if (array[i] == true){
+      corrects++;
+    }
+  }
+  return Math.floor((corrects / array.length) * 300);
+};
+
 d3.json('/data', function(err, confData){
   if (err){
     console.log('failed to get data:' + err);
   }else{
-    console.log(confData[0]);
+    //console.log(confData[0]);
     d3.selectAll('.bar').data(confData)
-      .style('height', )
+      .style('height', function(d){
+        
+        // var corrects = 0;
+        // for (var i = 0; i < d.length; i++){
+        //   if (d[i] == true){
+        //     corrects++;
+        //   }
+        // }
+        // return Math.floor((corrects / d.length) * 300) + 'px';
+        return heightFromData(d) + 'px';
+      })
+      // .style('bottom', function(d){
+      //   return -300 + heightFromData(d) + 'px';
+      // });
   }
   console.log(confData);
 })
