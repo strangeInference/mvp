@@ -16,6 +16,21 @@ var stats = [[],[],[],[],[],[],[],[],[],[],[]];
 //   })
 
 $(document).ready(function(){
+  $('.log').submit(function(event){
+    event.preventDefault();
+    var usename = $(this).find('input[name=user]').val();
+    console.log(usename);
+    var data = JSON.stringify({ usename: usename });
+    console.log(data);
+
+    $.ajax('/login', {
+      'data': data, 
+      'type': 'POST',
+      'processData': false,
+      'contentType': 'application/json' 
+    });
+  });
+
   $('.reality').submit(function(event){
     event.preventDefault();
     var $form = $(this);

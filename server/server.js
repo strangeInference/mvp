@@ -76,10 +76,12 @@ var checkUser = function (req, res, next) {
 //***************************
 // AUTHENTICATION
 //***************************
+
 app.get('/signup', function(req, res){
 
 });
 app.get('/login', function(req, res){
+  console.log(req.body);
 
 });
 app.get('/logout', function(req, res){
