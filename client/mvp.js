@@ -15,6 +15,17 @@ var stats = [[true],[],[],[],[],[],[],[],[],[],[]];
 //     console.log(stats[$('select').val()]);
 //   })
 
+$(document).ready(function(){
+  $('.reality').submit(function(event){
+    event.preventDefault();
+    var $form = $(this);
+    var perc = $form.find('select').val();
+    var truth = $form.find('input[name="ys"]').val();
+    var url = $form.attr('action');
+    console.log(perc + " " + truth + " " + url);
+  })
+})
+
 var heightFromData = function(array){
   console.log("Dee Dee Dee func")
   var corrects = 0;
