@@ -71,12 +71,15 @@ $(document).ready(function(){
      if (err){
        console.log('failed to get data:' + err);
      }else{
-       console.log(confData);
-      d3.selectAll('.bar').data(confData[username])
-      .style('height', function(d){
+       console.log(confData[username]);
+       d3.selectAll('.bar').data(confData[username])
+        .style('height', function(d){
+          if (!d){
+            d = [0];
+          }
       
-        return heightFromData(d) + 'px';
-      })
+          return heightFromData(d) + 'px';
+        })
       // .style('bottom', function(d){
       //   return -300 + heightFromData(d) + 'px';
       // });

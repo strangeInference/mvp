@@ -44,7 +44,7 @@ app.post('/data', function(req, res){
   if (!(currentUser in users)){
     users[currentUser] = [];
     for (var i = 0; i < 11; i++){
-       users[user].push([]);
+       users[currentUser].push([]);
     }
   }
   stats = users[currentUser];
