@@ -1,0 +1,28 @@
+{
+  "name": "2015-11-mvp",
+  "homepage": "https://github.com/strangeInference/2015-11-mvp",
+  "authors": [
+    "Nikola Phipps <tesla.phipps@gmail.com>"
+  ],
+  "description": "confidece",
+  "main": "mvp.js",
+  "moduleType": [],
+  "keywords": [
+    "ummm"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "d3": "~3.4.4",
+    "underscore": "~1.8.3",
+    "jquery": "~2.1.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

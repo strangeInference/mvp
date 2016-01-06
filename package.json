@@ -1,0 +1,29 @@
+{
+  "name": "2015-11-mvp",
+  "version": "1.0.0",
+  "description": "confidence cal",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.2",
+    "express-session": "^1.12.1",
+    "mongoose": "^4.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strangeInference/2015-11-mvp.git"
+  },
+  "keywords": [
+    "errr"
+  ],
+  "author": "Nikola Phipps",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/strangeInference/2015-11-mvp/issues"
+  },
+  "homepage": "https://github.com/strangeInference/2015-11-mvp#readme"
+}
