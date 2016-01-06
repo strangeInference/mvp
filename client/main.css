@@ -28,7 +28,10 @@
   display: inline-block;
   position: relative;
   background-color: green;
-  /*bottom: -200px;*/
+  /*bottom: 0px;*/
+}
+.one {
+  background-color: white;
 }
 
 .line {

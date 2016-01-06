@@ -74,9 +74,9 @@ $(document).ready(function(){
        console.log(confData[username]);
        d3.selectAll('.bar').data(confData[username])
         .style('height', function(d){
-          if (!d){
-            d = [0];
-          }
+          // if (!d){
+          //   d = [0];
+          // }
       
           return heightFromData(d) + 'px';
         })
